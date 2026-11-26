@@ -214,7 +214,9 @@ REPO=jovian-zhibai/tvbox-sync-config python scripts/update.py
 **自动提交会不会死循环？**
 不会。`update.yml` 的 push 触发只监听 `config/`、`scripts/`、`requirements.txt`，而它自己只改 `output/` 和 README 状态区，不会自我触发。
 
-`health.yml` 和 `discover.yml` 提交的是 `config/` 下的文件，**会**触发一次 `update.yml` —— 这是有意为之：源列表变了就该重新产出订阅。三个工作流共用 `concurrency: tvbox-config-write`，同一时刻只跑一个，不会互相覆盖。
+**不会自我触发，但会主动补跑。** GitHub 有一条防递归规则：用内置 `GITHUB_TOKEN` 做的提交**不会**触发其它 workflow。所以 `health.yml` 和 `discover.yml` 改完 `config/sources.json` 后，`update.yml` 并不会被 push 触发 —— 它们会在同一个 job 里显式跑一次 `python scripts/update.py` 并提交产物。
+
+三个工作流共用 `concurrency: tvbox-config-write`，同一时刻只跑一个，不会互相覆盖。
 
 **为什么只有 20 个源？**
 源不是越多越好。每多一个源就多一份失效风险和一次请求开销，而 TVBox 里真正被使用的通常只有前几个。20 个已经覆盖约 1900 个站点。

@@ -33,14 +33,41 @@ jobs:
         run: python scripts/health.py
 
       - name: Commit health results
+        id: commit
         run: |
           git config --local user.name "github-actions[bot]"
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add config/sources.json config/health.json
           if git diff --cached --quiet; then
             echo "::notice::源状态无变化"
+            echo "changed=false" >> $GITHUB_OUTPUT
           else
             git commit -m "chore(health): 源健康检查 $(date -u +'%Y-%m-%d %H:%M UTC')"
             git push origin main
             echo "::notice::已更新源状态"
+            echo "changed=true" >> $GITHUB_OUTPUT
+            # 源被下线/恢复时，sources.json 变了，订阅必须立刻重出，
+            # 否则用户会在最长 12 小时内继续拿到已死源的地址。
+            if ! git diff HEAD^ --quiet -- config/sources.json; then
+              echo "sources_changed=true" >> $GITHUB_OUTPUT
+            else
+              echo "sources_changed=false" >> $GITHUB_OUTPUT
+            fi
+          fi
+
+      # GITHUB_TOKEN 的提交不会触发其它 workflow（GitHub 防递归机制），
+      # 所以源列表变化后必须在这里主动跑一次 update，不能指望 push 触发。
+      - name: Regenerate subscriptions
+        if: steps.commit.outputs.sources_changed == 'true'
+        run: python scripts/update.py
+
+      - name: Commit regenerated output
+        if: steps.commit.outputs.sources_changed == 'true'
+        run: |
+          git add output/ README.md
+          if git diff --cached --quiet; then
+            echo "::notice::订阅内容无变化"
+          else
+            git commit -m "chore(health): 源变更后重新生成订阅 $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git push origin main
           fi
