@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-26 22:29:32",
+  "updated_at": "2026-11-26 22:31:16",
   "repo": "jovian-zhibai/tvbox-sync-config",
   "sources": [
     {
@@ -14,7 +14,7 @@
       "name": "饭太硬",
       "ok": false,
       "used_url": null,
-      "error": "No connection adapters were found for 'hhttp://www.xn--sss604efuw.cc/tv'"
+      "error": "Expecting value: line 1 column 1 (char 0)"
     },
     {
       "id": "wangerxiao",
@@ -125,16 +125,16 @@
       "id": "mengzhu_ysc",
       "name": "萌主影视仓",
       "ok": true,
-      "used_url": "(缓存)",
-      "error": "429 Client Error: Too Many Requests for url: https://jihulab.com/mengzhu2/ysc/-/raw/main/YSC.json",
-      "cached": true
+      "used_url": "https://jihulab.com/mengzhu2/ysc/-/raw/main/YSC.json",
+      "error": null
     },
     {
       "id": "mdxgh",
       "name": "mdxgh",
       "ok": true,
-      "used_url": "https://jihulab.com/mdxgh/mdxgh/-/raw/main/md.json",
-      "error": null
+      "used_url": "(缓存)",
+      "error": "429 Client Error: Too Many Requests for url: https://jihulab.com/mdxgh/mdxgh/-/raw/main/md.json",
+      "cached": true
     },
     {
       "id": "hccx",

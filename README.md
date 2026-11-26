@@ -20,12 +20,12 @@
 ## 一、源可用性状态
 
 <!-- STATUS_START -->
-> 🔄 最近更新：2026-11-26 22:29:32（北京时间） · 成功 **20/21** 个源
+> 🔄 最近更新：2026-11-26 22:31:16（北京时间） · 成功 **20/21** 个源
 
 | 配置源 | 状态 | 使用地址 |
 | --- | --- | --- |
 | 肥猫 | ✅ 成功 | `https://6296.kstore.vip/facat.json` |
-| 饭太硬 | ❌ 失败 | No connection adapters were found for 'hhttp://www.xn--ss... |
+| 饭太硬 | ❌ 失败 | Expecting value: line 1 column 1 (char 0) |
 | 王二小 | ✅ 成功 | `https://d.kstore.dev/download/9280/wex.json` |
 | 老刘备 | ✅ 成功 | `https://raw.liucn.cc/box/m.json` |
 | 小马 | ✅ 成功 | `https://szyyds.cn/tv/x.json` |
@@ -41,8 +41,8 @@
 | 小鱼 | ✅ 成功 | `https://6800.kstore.vip/fish.json` |
 | 我的九阳影视 | ✅ 成功 | `http://550.3vcn.work/wdjyys.json` |
 | 极简单仓 | ✅ 成功 | `https://jihulab.com/tvbox4431737/tvbox/-/raw/main/tv.json` |
-| 萌主影视仓 | 📦 缓存 | 上次成功配置（本次更新未抓到，沿用缓存） |
-| mdxgh | ✅ 成功 | `https://jihulab.com/mdxgh/mdxgh/-/raw/main/md.json` |
+| 萌主影视仓 | ✅ 成功 | `https://jihulab.com/mengzhu2/ysc/-/raw/main/YSC.json` |
+| mdxgh | 📦 缓存 | 上次成功配置（本次更新未抓到，沿用缓存） |
 | 何诚茶锈 | ✅ 成功 | `https://raw.githubusercontent.com/HeChengChaXiu/tvbox/main/hccx.json` |
 | noimank | ✅ 成功 | `https://gitlab.com/noimank/tvbox/-/raw/main/tvbox1.json` |
 <!-- STATUS_END -->
