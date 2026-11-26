@@ -1,8 +1,69 @@
 {
-  "description": "影视仓 / TVBox 配置源（精选 20 个）。按站点数、直播数、多仓子源数综合评分筛选，并经三轮探活验证；由 scripts/health.py 自动维护 enabled 状态。",
+  "description": "影视仓 / TVBox 配置源（精选 20 个，品牌源优先）。品牌源（肥猫、王二小、老刘备、小马、4K小盒子、小盒子单仓、刺桐娱乐）固定优先保留，其余按站点数/直播数/多仓子源数综合评分补足；由 scripts/health.py 自动维护 enabled 状态。",
   "update_interval_hours": 12,
   "max_sources": 20,
   "sources": [
+    {
+      "id": "feimao",
+      "name": "肥猫",
+      "brand": true,
+      "urls": [
+        "https://6296.kstore.vip/facat.json",
+        "http://肥猫.net/tv",
+        "http://肥猫.com/"
+      ]
+    },
+    {
+      "id": "wangerxiao",
+      "name": "王二小",
+      "brand": true,
+      "urls": [
+        "https://d.kstore.dev/download/9280/wex.json",
+        "https://9280.kstore.vip/newwex.json"
+      ]
+    },
+    {
+      "id": "laoliubei",
+      "name": "老刘备",
+      "brand": true,
+      "urls": [
+        "https://raw.liucn.cc/box/m.json",
+        "https://liu673cn.github.io/box/m.json",
+        "https://cdn.jsdelivr.net/gh/liu673cn/box@main/m.json"
+      ]
+    },
+    {
+      "id": "xiaoma",
+      "name": "小马",
+      "brand": true,
+      "urls": [
+        "https://szyyds.cn/tv/x.json"
+      ]
+    },
+    {
+      "id": "4k",
+      "name": "4K小盒子",
+      "brand": true,
+      "urls": [
+        "http://xhztv.top/4k.json"
+      ]
+    },
+    {
+      "id": "xiaohezi",
+      "name": "小盒子单仓",
+      "brand": true,
+      "urls": [
+        "http://xhztv.top/xhz"
+      ]
+    },
+    {
+      "id": "citong",
+      "name": "刺桐娱乐",
+      "brand": true,
+      "urls": [
+        "https://www.cttv.vip/ys/json/ctys.json"
+      ]
+    },
     {
       "id": "gao_js",
       "name": "高天流云 js",
@@ -10,16 +71,6 @@
       "urls": [
         "https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json",
         "https://gh-proxy.com/https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json"
-      ]
-    },
-    {
-      "id": "laoliubei",
-      "name": "老刘备",
-      "enabled": true,
-      "urls": [
-        "https://raw.liucn.cc/box/m.json",
-        "https://liu673cn.github.io/box/m.json",
-        "https://cdn.jsdelivr.net/gh/liu673cn/box@main/m.json"
       ]
     },
     {
@@ -104,15 +155,6 @@
       ]
     },
     {
-      "id": "wangerxiao",
-      "name": "王二小",
-      "enabled": true,
-      "urls": [
-        "https://d.kstore.dev/download/9280/wex.json",
-        "https://9280.kstore.vip/newwex.json"
-      ]
-    },
-    {
       "id": "tmoom_xh",
       "name": "tmoom/xh",
       "enabled": true,
@@ -126,47 +168,6 @@
       "enabled": true,
       "urls": [
         "https://jihulab.com/mengzhu2/ysc/-/raw/main/YSC.json"
-      ]
-    },
-    {
-      "id": "xiaoma",
-      "name": "小马",
-      "enabled": true,
-      "urls": [
-        "https://szyyds.cn/tv/x.json"
-      ]
-    },
-    {
-      "id": "xhztv_dc",
-      "name": "小盒子多仓",
-      "enabled": true,
-      "urls": [
-        "http://xhztv.top/dc",
-        "http://xhztv.top/DC.txt"
-      ]
-    },
-    {
-      "id": "mdxgh",
-      "name": "mdxgh",
-      "enabled": true,
-      "urls": [
-        "https://jihulab.com/mdxgh/mdxgh/-/raw/main/md.json"
-      ]
-    },
-    {
-      "id": "hccx",
-      "name": "何诚茶锈",
-      "enabled": true,
-      "urls": [
-        "https://raw.githubusercontent.com/HeChengChaXiu/tvbox/main/hccx.json"
-      ]
-    },
-    {
-      "id": "noimank",
-      "name": "noimank",
-      "enabled": true,
-      "urls": [
-        "https://gitlab.com/noimank/tvbox/-/raw/main/tvbox1.json"
       ]
     }
   ]

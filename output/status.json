@@ -1,12 +1,19 @@
 {
-  "updated_at": "2026-11-26 15:28:30",
+  "updated_at": "2026-11-26 15:47:20",
   "repo": "jovian-zhibai/tvbox-sync-config",
   "sources": [
     {
-      "id": "gao_js",
-      "name": "高天流云 js",
+      "id": "feimao",
+      "name": "肥猫",
       "ok": true,
-      "used_url": "https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json",
+      "used_url": "https://6296.kstore.vip/facat.json",
+      "error": null
+    },
+    {
+      "id": "wangerxiao",
+      "name": "王二小",
+      "ok": true,
+      "used_url": "https://d.kstore.dev/download/9280/wex.json",
       "error": null
     },
     {
@@ -14,6 +21,41 @@
       "name": "老刘备",
       "ok": true,
       "used_url": "https://raw.liucn.cc/box/m.json",
+      "error": null
+    },
+    {
+      "id": "xiaoma",
+      "name": "小马",
+      "ok": true,
+      "used_url": "https://szyyds.cn/tv/x.json",
+      "error": null
+    },
+    {
+      "id": "4k",
+      "name": "4K小盒子",
+      "ok": true,
+      "used_url": "http://xhztv.top/4k.json",
+      "error": null
+    },
+    {
+      "id": "xiaohezi",
+      "name": "小盒子单仓",
+      "ok": true,
+      "used_url": "http://xhztv.top/xhz",
+      "error": null
+    },
+    {
+      "id": "citong",
+      "name": "刺桐娱乐",
+      "ok": true,
+      "used_url": "https://www.cttv.vip/ys/json/ctys.json",
+      "error": null
+    },
+    {
+      "id": "gao_js",
+      "name": "高天流云 js",
+      "ok": true,
+      "used_url": "https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json",
       "error": null
     },
     {
@@ -87,13 +129,6 @@
       "error": null
     },
     {
-      "id": "wangerxiao",
-      "name": "王二小",
-      "ok": true,
-      "used_url": "https://d.kstore.dev/download/9280/wex.json",
-      "error": null
-    },
-    {
       "id": "tmoom_xh",
       "name": "tmoom/xh",
       "ok": true,
@@ -105,41 +140,6 @@
       "name": "萌主影视仓",
       "ok": true,
       "used_url": "https://jihulab.com/mengzhu2/ysc/-/raw/main/YSC.json",
-      "error": null
-    },
-    {
-      "id": "xiaoma",
-      "name": "小马",
-      "ok": true,
-      "used_url": "https://szyyds.cn/tv/x.json",
-      "error": null
-    },
-    {
-      "id": "xhztv_dc",
-      "name": "小盒子多仓",
-      "ok": true,
-      "used_url": "http://xhztv.top/dc",
-      "error": null
-    },
-    {
-      "id": "mdxgh",
-      "name": "mdxgh",
-      "ok": true,
-      "used_url": "https://jihulab.com/mdxgh/mdxgh/-/raw/main/md.json",
-      "error": null
-    },
-    {
-      "id": "hccx",
-      "name": "何诚茶锈",
-      "ok": true,
-      "used_url": "https://raw.githubusercontent.com/HeChengChaXiu/tvbox/main/hccx.json",
-      "error": null
-    },
-    {
-      "id": "noimank",
-      "name": "noimank",
-      "ok": true,
-      "used_url": "https://gitlab.com/noimank/tvbox/-/raw/main/tvbox1.json",
       "error": null
     }
   ]

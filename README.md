@@ -7,6 +7,12 @@
 
 **只保留最优 20 个源**：从 600+ 个公开地址里累计探测三轮，按"站点数 + 直播数 + 多仓子源数"综合评分，再做内容去重（同一份配置的不同镜像只留一个），取评分最高的 20 个。当前这 20 个源合计约 1900 个站点、200 个多仓子源，全部实测可用。
 
+### 源的选择规则
+
+**品牌源优先保留** 🏷️ — 肥猫、王二小、老刘备、小马、4K小盒子、小盒子单仓、刺桐娱乐这 7 个是长期维护的知名源，固定占用名额，不参与评分淘汰，`discover.py` 也不会删除它们。
+
+剩余 13 个名额从公开地址里按"站点数 + 直播数×1.5 + 多仓子源数×4"评分补足，并用站点 key 集合去重（同一份配置的不同镜像只留一个）。
+
 > 所有配置均来自互联网公开分享，版权归原作者所有；本仓库仅做聚合与镜像，仅供学习交流，请勿商用。
 
 ---
@@ -14,12 +20,18 @@
 ## 一、源可用性状态
 
 <!-- STATUS_START -->
-> 🔄 最近更新：2026-11-26 15:28:30（北京时间） · 成功 **20/20** 个源
+> 🔄 最近更新：2026-11-26 15:47:20（北京时间） · 成功 **20/20** 个源
 
 | 配置源 | 状态 | 使用地址 |
 | --- | --- | --- |
-| 高天流云 js | ✅ 成功 | `https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json` |
+| 肥猫 | ✅ 成功 | `https://6296.kstore.vip/facat.json` |
+| 王二小 | ✅ 成功 | `https://d.kstore.dev/download/9280/wex.json` |
 | 老刘备 | ✅ 成功 | `https://raw.liucn.cc/box/m.json` |
+| 小马 | ✅ 成功 | `https://szyyds.cn/tv/x.json` |
+| 4K小盒子 | ✅ 成功 | `http://xhztv.top/4k.json` |
+| 小盒子单仓 | ✅ 成功 | `http://xhztv.top/xhz` |
+| 刺桐娱乐 | ✅ 成功 | `https://www.cttv.vip/ys/json/ctys.json` |
+| 高天流云 js | ✅ 成功 | `https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json` |
 | 拾光多仓 | ✅ 成功 | `http://xmbjm.fh4u.org/dc.txt` |
 | yydf 单仓 | ✅ 成功 | `https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json` |
 | 小盒子多仓 xh2 | ✅ 成功 | `https://jihulab.com/z-blog/xh2/-/raw/main/t3.json` |
@@ -30,14 +42,8 @@
 | 挺好分享多仓 | ✅ 成功 | `http://ztha.top/TVBox/GYCK.json` |
 | 小鱼 | ✅ 成功 | `https://6800.kstore.vip/fish.json` |
 | 我的九阳影视 | ✅ 成功 | `http://550.3vcn.work/wdjyys.json` |
-| 王二小 | ✅ 成功 | `https://d.kstore.dev/download/9280/wex.json` |
 | tmoom/xh | ✅ 成功 | `https://raw.githubusercontent.com/tmoom/xh/main/t.json` |
 | 萌主影视仓 | ✅ 成功 | `https://jihulab.com/mengzhu2/ysc/-/raw/main/YSC.json` |
-| 小马 | ✅ 成功 | `https://szyyds.cn/tv/x.json` |
-| 小盒子多仓 | ✅ 成功 | `http://xhztv.top/dc` |
-| mdxgh | ✅ 成功 | `https://jihulab.com/mdxgh/mdxgh/-/raw/main/md.json` |
-| 何诚茶锈 | ✅ 成功 | `https://raw.githubusercontent.com/HeChengChaXiu/tvbox/main/hccx.json` |
-| noimank | ✅ 成功 | `https://gitlab.com/noimank/tvbox/-/raw/main/tvbox1.json` |
 <!-- STATUS_END -->
 
 ## 二、仓库结构
@@ -67,7 +73,33 @@ tvbox-sync-config/
 └── README.md
 ```
 
-## 三、在影视仓 / TVBox 中使用
+## 三、网页版订阅地址
+
+仓库启用了 GitHub Pages，可以直接在浏览器里查看当前有哪些源、逐个点开复制：
+
+| 入口 | 地址 |
+| --- | --- |
+| 自定义域名 | <https://tvbox.souljian.cn/> |
+| GitHub 默认地址 | <https://jovian-zhibai.github.io/tvbox-sync-config/> |
+
+> 页面本身只做展示，**App 里订阅请用下面 `raw.githubusercontent.com` 的地址** ——
+> raw 地址返回纯 JSON，Pages 返回的是网页。
+
+### 自定义域名配置（一次性）
+
+`CNAME` 文件已写好 `tvbox.souljian.cn`，还需在 DNS 服务商（腾讯云 DNSPod）加一条记录：
+
+| 主机记录 | 类型 | 值 |
+| --- | --- | --- |
+| `tvbox` | CNAME | `jovian-zhibai.github.io` |
+
+> ⚠️ **不要用 `tv.souljian.cn`** —— 那个子域名已被 LibreTV（Vercel）占用。
+> 根域 `souljian.cn` 也指向 Vercel，同样不要动。
+>
+> 如果 GitHub 提示需要验证域名所有权，按提示在 DNS 加一条
+> `_github-pages-challenge-jovian-zhibai` 的 TXT 记录即可。
+
+## 四、在影视仓 / TVBox 中使用
 
 部署完成后，把下面任一地址填入 App 的「设置 → 配置地址」：
 
@@ -75,8 +107,14 @@ tvbox-sync-config/
 | --- | --- | --- |
 | **多仓订阅（推荐）** | `https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/多仓订阅.json` | App 内可在各源之间切换（20 源全覆盖） |
 | **单仓聚合** | `https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/单仓聚合.json` | 所有源站点合并成一个，无需切换 |
+| 单仓 · 肥猫 🏷️ | `https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/feimao.json` | 3 个地址互为备用 |
+| 单仓 · 王二小 🏷️ | `https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/wangerxiao.json` | 2 个地址互为备用 |
+| 单仓 · 老刘备 🏷️ | `https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/laoliubei.json` | 3 个地址互为备用 |
+| 单仓 · 小马 🏷️ | `https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/xiaoma.json` |  |
+| 单仓 · 4K小盒子 🏷️ | `https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/4k.json` |  |
+| 单仓 · 小盒子单仓 🏷️ | `https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/xiaohezi.json` |  |
+| 单仓 · 刺桐娱乐 🏷️ | `https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/citong.json` |  |
 | 单仓 · 高天流云 js | `https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/gao_js.json` | 2 个地址互为备用 |
-| 单仓 · 老刘备 | `https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/laoliubei.json` | 3 个地址互为备用 |
 | 单仓 · 拾光多仓 | `https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/shiguang.json` | 2 个地址互为备用 |
 | 单仓 · yydf 单仓 | `https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/yydf.json` |  |
 | 单仓 · 小盒子多仓 xh2 | `https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/xh2_t3.json` |  |
@@ -87,18 +125,12 @@ tvbox-sync-config/
 | 单仓 · 挺好分享多仓 | `https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/tinghao.json` |  |
 | 单仓 · 小鱼 | `https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/fish.json` |  |
 | 单仓 · 我的九阳影视 | `https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/wdjyys.json` |  |
-| 单仓 · 王二小 | `https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/wangerxiao.json` | 2 个地址互为备用 |
 | 单仓 · tmoom/xh | `https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/tmoom_xh.json` |  |
 | 单仓 · 萌主影视仓 | `https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/mengzhu_ysc.json` |  |
-| 单仓 · 小马 | `https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/xiaoma.json` |  |
-| 单仓 · 小盒子多仓 | `https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/xhztv_dc.json` | 2 个地址互为备用 |
-| 单仓 · mdxgh | `https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/mdxgh.json` |  |
-| 单仓 · 何诚茶锈 | `https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/hccx.json` |  |
-| 单仓 · noimank | `https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/noimank.json` |  |
 
 > 多仓订阅与单仓文件里的地址由脚本根据 `GITHUB_REPOSITORY` 环境变量自动生成。若国内直连 raw.githubusercontent.com 慢，可套一层 `ghproxy` / `gh-proxy` 等加速前缀。
 
-## 四、自动化机制
+## 五、自动化机制
 
 三个工作流分工，都用内置 `GITHUB_TOKEN`，不需要任何密钥。它们共用同一把并发锁
 （`tvbox-config-write`），避免同时改写 `config/sources.json`。
@@ -128,7 +160,7 @@ tvbox-sync-config/
 - 已有源用过的域名、代理镜像、内容指纹重复的地址都会被剔除
 - 源总数受 `max_sources`（20）约束：满了之后只能替换评分更低的自动发现源，**手工维护的源不会被机器人覆盖**
 
-## 五、自定义配置源
+## 六、自定义配置源
 
 编辑 `config/sources.json` 即可增删源或更换地址：
 
@@ -156,14 +188,14 @@ tvbox-sync-config/
 
 ⚠️ **超出 20 个上限时会发生什么**：`discover.py` 晋升新源前会先删掉评分最低的**自动发现源**（带 `discovered: true` 标记的），腾出位置；如果 20 个全是手工维护的源，它就不晋升，只把新地址留在候选池。所以手工加的源不会被机器人悄悄删掉。
 
-## 六、本地手动更新（可选）
+## 七、本地手动更新（可选）
 
 ```bash
 pip install -r requirements.txt
 REPO=jovian-zhibai/tvbox-sync-config python scripts/update.py
 ```
 
-## 七、脚本特性
+## 八、脚本特性
 
 - **中文域名自动转 punycode**：`饭太硬.com` → `xn--sss604efuw.com`，避免 DNS 解析失败。
 - **多地址回退**：每个源按顺序尝试主/备用地址，单个地址失败不影响其他源。
@@ -174,11 +206,24 @@ REPO=jovian-zhibai/tvbox-sync-config python scripts/update.py
 - **状态可视化**：每次更新自动刷新 README 状态表与 shields.io 徽章。
 - **部分成功可用**：只要有一个源成功就产出可用订阅，失败源记录在 `status.json` 与 README 状态表。
 
-## 八、常见问题
+## 九、常见问题
 
-- **某个源一直失败？** 大部分源做了地区/频率限制，GitHub Actions 与本地网络环境不同，可能某个环境能访问、另一个不能。脚本会按 `urls` 顺序自动尝试所有备用地址，只把成功的写入。
-- **自动提交会不会死循环？** 不会。push 触发只监听 `config/`、`scripts/`、`requirements.txt` 的变更，自动提交只改 `output/` 与 README 状态区，不会再次触发。
+**某个源一直失败？**
+大部分源做了地区/频率限制，GitHub Actions 和本地网络环境不同，可能一边能访问、另一边不行。脚本会按 `urls` 顺序自动尝试所有备用地址，只把成功的写进去；连续失败 3 次后 `health.py` 会自动把它下线。
 
-## 九、免责声明
+**自动提交会不会死循环？**
+不会。`update.yml` 的 push 触发只监听 `config/`、`scripts/`、`requirements.txt`，而它自己只改 `output/` 和 README 状态区，不会自我触发。
+
+`health.yml` 和 `discover.yml` 提交的是 `config/` 下的文件，**会**触发一次 `update.yml` —— 这是有意为之：源列表变了就该重新产出订阅。三个工作流共用 `concurrency: tvbox-config-write`，同一时刻只跑一个，不会互相覆盖。
+
+**为什么只有 20 个源？**
+源不是越多越好。每多一个源就多一份失效风险和一次请求开销，而 TVBox 里真正被使用的通常只有前几个。20 个已经覆盖约 1900 个站点。
+
+淘汰的源没有丢，都在 `config/reserve.json` 里（19 个，含饭太硬、讴歌这两个暂时失效的品牌源）。想换回某个源时，把它整项复制到 `config/sources.json` 即可。
+
+**想加自己的源？**
+在 `config/sources.json` 里加一项即可，但注意总数上限是 20 —— 超出时 `discover.py` 只会淘汰机器人自己加的源，你手写的不会被删。
+
+## 十、免责声明
 
 本项目仅用于学习、测试与个人使用；聚合的接口资源来自互联网公开分享，版权归原作者所有。若涉及侵权，请联系删除相应内容。

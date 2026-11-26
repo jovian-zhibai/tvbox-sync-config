@@ -363,14 +363,18 @@ def main():
                 continue
 
             if max_sources and enabled_count >= max_sources:
-                auto = [s for s in sources if s.get("discovered") and s.get("enabled", True)]
+                # 达到上限时，只允许淘汰机器人自己加的源（discovered: true）。
+                # 品牌源和人工精选源都不动 —— 那是人的判断。
+                auto = [s for s in sources
+                        if s.get("discovered") and s.get("enabled", True)]
                 if not auto:
-                    print(f"  源数已达上限 {max_sources}，且没有可替换的自动源，停止晋升")
+                    print(f"  源数已达上限 {max_sources}，无机器人自动源可替换，"
+                          f"新源留在候选池等待")
                     break
                 weakest = min(auto, key=lambda s: s.get("score", 0))
                 new_score = c.get("sites", 0) + c.get("lives", 0) * 1.5 + c.get("children", 0) * 4.0
                 if new_score <= weakest.get("score", 0):
-                    continue  # 新源还不如现有的，不换
+                    continue  # 新源还不如现有的自动源，不换
                 sources.remove(weakest)
                 taken_ids.discard(weakest.get("id"))
                 enabled_count -= 1

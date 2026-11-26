@@ -1,0 +1,180 @@
+{
+  "description": "候补源清单：实测或曾经可用、但当前未进入正式 20 个源列表的配置。想换回某个源时，把它整项复制到 config/sources.json 并保证总数不超过 20。",
+  "items": [
+    {
+      "id": "fantaiying",
+      "name": "饭太硬",
+      "urls": [
+        "http://www.饭太硬.net/tv",
+        "http://www.饭太硬.cc/tv",
+        "http://www.饭太硬.xyz/tv"
+      ],
+      "note": "品牌源，当前全部地址失效，恢复后可换回",
+      "brand": true
+    },
+    {
+      "id": "ouge",
+      "name": "讴歌",
+      "urls": [
+        "http://tv.nxog.top/m/",
+        "https://欧歌.v.nxog.top/m/"
+      ],
+      "note": "品牌源，当前 403/证书错误",
+      "brand": true
+    },
+    {
+      "id": "jundie_yosakoi",
+      "name": "jundie yosakoi",
+      "urls": [
+        "http://home.jundie.top:81/TVBox/yosakoi.json"
+      ],
+      "note": "实测可用 49 站",
+      "brand": false
+    },
+    {
+      "id": "dxawi",
+      "name": "dxawi",
+      "urls": [
+        "https://dxawi.github.io/0/0.json"
+      ],
+      "note": "实测可用 48 站 / 4 直播",
+      "brand": false
+    },
+    {
+      "id": "yoursmile",
+      "name": "微笑 Yoursmile",
+      "urls": [
+        "https://raw.githubusercontent.com/Yoursmile77/TVBox/main/XC.json"
+      ],
+      "note": "实测可用 58 站",
+      "brand": false
+    },
+    {
+      "id": "hccx",
+      "name": "何诚茶锈",
+      "urls": [
+        "https://raw.githubusercontent.com/HeChengChaXiu/tvbox/main/hccx.json"
+      ],
+      "note": "实测可用 68 站",
+      "brand": false
+    },
+    {
+      "id": "noimank",
+      "name": "noimank",
+      "urls": [
+        "https://gitlab.com/noimank/tvbox/-/raw/main/tvbox1.json"
+      ],
+      "note": "实测可用 64 站",
+      "brand": false
+    },
+    {
+      "id": "mdxgh",
+      "name": "mdxgh",
+      "urls": [
+        "https://jihulab.com/mdxgh/mdxgh/-/raw/main/md.json"
+      ],
+      "note": "实测可用 67 站",
+      "brand": false
+    },
+    {
+      "id": "xhztv_dc",
+      "name": "小盒子多仓 DC",
+      "urls": [
+        "http://xhztv.top/dc",
+        "http://xhztv.top/DC.txt"
+      ],
+      "note": "实测可用 18 个子源",
+      "brand": false
+    },
+    {
+      "id": "jigedos",
+      "name": "jigedos 1024",
+      "urls": [
+        "https://raw.githubusercontent.com/jigedos/1024/master/jsm.json"
+      ],
+      "note": "实测可用 46 站",
+      "brand": false
+    },
+    {
+      "id": "liangmyjj",
+      "name": "Liangmyjj",
+      "urls": [
+        "https://jihulab.com/Liangmyjj/tvboxx/-/raw/main/yinzuo2.json"
+      ],
+      "note": "实测可用 35 站",
+      "brand": false
+    },
+    {
+      "id": "xgg",
+      "name": "小哥哥",
+      "urls": [
+        "http://47.96.82.41:5188/rose/18/xgg.json"
+      ],
+      "note": "实测可用 24 站",
+      "brand": false
+    },
+    {
+      "id": "yingm",
+      "name": "影迷",
+      "urls": [
+        "https://www.yingm.cc/dm/dm.json"
+      ],
+      "note": "实测可用 27 站",
+      "brand": false
+    },
+    {
+      "id": "pyramid",
+      "name": "金字塔 PyramidStore",
+      "urls": [
+        "https://raw.githubusercontent.com/UndCover/PyramidStore/main/py.json"
+      ],
+      "note": "实测可用 23 站",
+      "brand": false
+    },
+    {
+      "id": "jundie_top98",
+      "name": "jundie top98",
+      "urls": [
+        "http://home.jundie.top:81/top98.json"
+      ],
+      "note": "实测可用 24 站",
+      "brand": false
+    },
+    {
+      "id": "gao_xyq",
+      "name": "高天流云 XYQ",
+      "urls": [
+        "https://raw.githubusercontent.com/gaotianliuyun/gao/master/XYQ.json"
+      ],
+      "note": "实测可用 49 站",
+      "brand": false
+    },
+    {
+      "id": "mengzhu_fmjk",
+      "name": "萌主饭猫接口",
+      "urls": [
+        "https://jihulab.com/mengzhu2/fmjk/-/raw/main/FMJK.json"
+      ],
+      "note": "实测可用 56 站",
+      "brand": false
+    },
+    {
+      "id": "qiqiv",
+      "name": "七七多仓",
+      "urls": [
+        "http://z.qiqiv.cn/123"
+      ],
+      "note": "实测可用 13 个子源",
+      "brand": false
+    },
+    {
+      "id": "ygbh_dc",
+      "name": "月光宝盒多仓",
+      "urls": [
+        "https://jihulab.com/ygbh1/box/-/raw/main/dcang/dc.json"
+      ],
+      "note": "实测可用 16 个子源",
+      "brand": false
+    }
+  ]
+}
