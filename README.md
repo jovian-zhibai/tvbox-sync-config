@@ -20,15 +20,15 @@
 ## 一、源可用性状态
 
 <!-- STATUS_START -->
-> 🔄 最近更新：2026-11-26 23:11:52（北京时间） · 成功 **20/21** 个源
+> 🔄 最近更新：2026-11-26 23:36:52（北京时间） · 成功 **20/20** 个源
 
 | 配置源 | 状态 | 使用地址 |
 | --- | --- | --- |
 | 肥猫 | ✅ 成功 | `https://6296.kstore.vip/facat.json` |
-| 饭太硬 | ❌ 失败 | Expecting value: line 1 column 1 (char 0) |
 | 王二小 | ✅ 成功 | `https://d.kstore.dev/download/9280/wex.json` |
 | 老刘备 | ✅ 成功 | `https://raw.liucn.cc/box/m.json` |
 | 小马 | ✅ 成功 | `https://szyyds.cn/tv/x.json` |
+| 饭太硬 | ✅ 成功 | `http://www.饭太硬.net/tv` |
 | 小盒子单仓 | ✅ 成功 | `http://xhztv.top/xhz` |
 | 刺桐娱乐 | ✅ 成功 | `https://www.cttv.vip/ys/json/ctys.json` |
 | 高天流云 | ✅ 成功 | `https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json` |
@@ -44,7 +44,6 @@
 | mdxgh | ✅ 成功 | `https://jihulab.com/mdxgh/mdxgh/-/raw/main/md.json` |
 | 何诚茶锈 | ✅ 成功 | `https://raw.githubusercontent.com/HeChengChaXiu/tvbox/main/hccx.json` |
 | noimank | ✅ 成功 | `https://gitlab.com/noimank/tvbox/-/raw/main/tvbox1.json` |
-| Liangmyjj | ✅ 成功 | `https://jihulab.com/Liangmyjj/tvboxx/-/raw/main/yinzuo2.json` |
 <!-- STATUS_END -->
 
 ## 二、仓库结构

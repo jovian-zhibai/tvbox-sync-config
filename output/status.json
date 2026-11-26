@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-26 23:11:52",
+  "updated_at": "2026-11-26 23:36:52",
   "repo": "jovian-zhibai/tvbox-sync-config",
   "sources": [
     {
@@ -8,13 +8,6 @@
       "ok": true,
       "used_url": "https://6296.kstore.vip/facat.json",
       "error": null
-    },
-    {
-      "id": "fantaiying",
-      "name": "饭太硬",
-      "ok": false,
-      "used_url": null,
-      "error": "Expecting value: line 1 column 1 (char 0)"
     },
     {
       "id": "wangerxiao",
@@ -35,6 +28,13 @@
       "name": "小马",
       "ok": true,
       "used_url": "https://szyyds.cn/tv/x.json",
+      "error": null
+    },
+    {
+      "id": "fantaiying",
+      "name": "饭太硬",
+      "ok": true,
+      "used_url": "http://www.饭太硬.net/tv",
       "error": null
     },
     {
@@ -140,13 +140,6 @@
       "name": "noimank",
       "ok": true,
       "used_url": "https://gitlab.com/noimank/tvbox/-/raw/main/tvbox1.json",
-      "error": null
-    },
-    {
-      "id": "liangmyjj",
-      "name": "Liangmyjj",
-      "ok": true,
-      "used_url": "https://jihulab.com/Liangmyjj/tvboxx/-/raw/main/yinzuo2.json",
       "error": null
     }
   ]
