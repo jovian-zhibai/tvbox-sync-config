@@ -29,10 +29,6 @@
       "url": "https://gh-proxy.org/https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/gao_js.json"
     },
     {
-      "name": "yydf 单仓",
-      "url": "https://gh-proxy.org/https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/yydf.json"
-    },
-    {
       "name": "拾光多仓",
       "url": "https://gh-proxy.org/https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/shiguang.json"
     },
@@ -57,16 +53,16 @@
       "url": "https://gh-proxy.org/https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/fish.json"
     },
     {
-      "name": "我的九阳影视",
-      "url": "https://gh-proxy.org/https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/wdjyys.json"
+      "name": "jigedos",
+      "url": "https://gh-proxy.org/https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/jigedos.json"
+    },
+    {
+      "name": "jundie",
+      "url": "https://gh-proxy.org/https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/jundie_yosakoi.json"
     },
     {
       "name": "极简单仓",
       "url": "https://gh-proxy.org/https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/tvbox443.json"
-    },
-    {
-      "name": "萌主影视仓",
-      "url": "https://gh-proxy.org/https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/mengzhu_ysc.json"
     },
     {
       "name": "mdxgh",
@@ -79,6 +75,10 @@
     {
       "name": "noimank",
       "url": "https://gh-proxy.org/https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/noimank.json"
+    },
+    {
+      "name": "Liangmyjj",
+      "url": "https://gh-proxy.org/https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/liangmyjj.json"
     }
   ]
 }

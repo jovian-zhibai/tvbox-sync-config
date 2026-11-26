@@ -1,5 +1,5 @@
 {
-  "spider": "./lib/ttkx.jar",
+  "spider": "https://raw.githubusercontent.com/tmoom/ttkx/main/lib/ttkx.jar",
   "wallpaper": "https://tuapi.eees.cc/api.php?category=fengjing&type=302",
   "logo": "http://php.540734621.xyz/logo/logo.php",
   "lives": [

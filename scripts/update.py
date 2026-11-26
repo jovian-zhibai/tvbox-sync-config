@@ -21,6 +21,7 @@
 import datetime
 import json
 import os
+import re
 import sys
 import time
 import urllib.parse
@@ -89,6 +90,56 @@ def idn_encode(url: str) -> str:
     return urllib.parse.urlunsplit(
         (parsed.scheme, netloc, parsed.path, parsed.query, parsed.fragment)
     )
+
+
+def absolutize_spider(data: dict, source_url: str) -> dict:
+    """把相对的 spider 路径改成绝对地址。
+
+    很多配置写 spider: "./jar/pg.jar"，这是相对于**配置文件所在目录**的。
+    我们只搬运 JSON、不搬运 jar，TVBox 会以我们仓库的 output/ 为基准去取
+    output/jar/pg.jar —— 那是 404，于是站点能显示但一播放就失败。
+
+    这里把相对路径还原到源站的真实地址，例如
+      raw.liucn.cc/box/m.json + ./fty.jar  ->  raw.liucn.cc/box/fty.jar
+    """
+    if not isinstance(data, dict):
+        return data
+    spider = data.get("spider")
+    if not spider or not isinstance(spider, str):
+        return data
+    # spider 可能带 ";md5;xxx" 后缀，拆出来单独处理
+    path, _, suffix = spider.partition(";")
+
+    # 代理前缀经常先于目标站失效，且有两种写法：
+    #   gh-proxy.com/https://raw.githubusercontent.com/...   （带协议）
+    #   gh-proxy.com/raw.githubusercontent.com/...           （不带协议）
+    # 两种都要还原成直连，否则代理挂了 spider 会连带取不到。
+    m = re.match(
+        r"^https?://(?:gh-proxy\.com|ghproxy\.net|ghproxy\.com|ghp\.ci)/"
+        r"(?:(https?)://)?([^/\s]+)(/.*)?$",
+        path,
+    )
+    if m:
+        scheme = m.group(1) or "https"
+        host = m.group(2)
+        rest = m.group(3) or ""
+        direct = f"{scheme}://{host}{rest}"
+        try:
+            r = requests.head(direct, timeout=8, allow_redirects=True,
+                              headers={"User-Agent": USER_AGENT})
+            if r.status_code < 400:
+                path = direct
+        except Exception:
+            pass  # 直连不通就保留原代理地址
+
+    if not path.startswith(("./", "../", "/")) and not path.startswith("."):
+        base = path  # 已经是绝对地址，直接用
+    else:
+        base = urllib.parse.urljoin(source_url, path)
+
+    data = dict(data)
+    data["spider"] = base + (";" + suffix if suffix else "")
+    return data
 
 
 def is_valid_tvbox_config(data) -> bool:
@@ -319,6 +370,7 @@ def main() -> int:
         for url in urls:
             try:
                 data = fetch_config(url)
+                data = absolutize_spider(data, url)
                 out_path = os.path.join(OUTPUT_DIR, f"{sid}.json")
                 with open(out_path, "w", encoding="utf-8") as f:
                     json.dump(data, f, ensure_ascii=False, indent=2)

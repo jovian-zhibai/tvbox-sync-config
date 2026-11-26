@@ -1,5 +1,5 @@
 {
-  "spider": "./lib/HeChengChaXiu.jar",
+  "spider": "https://raw.githubusercontent.com/tmoom/xh/main/lib/HeChengChaXiu.jar",
   "wallpaper": "https://tuapi.eees.cc/api.php?category=fengjing&type=302",
   "lives": [
     {

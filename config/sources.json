@@ -74,14 +74,6 @@
       ]
     },
     {
-      "id": "yydf",
-      "name": "yydf 单仓",
-      "enabled": true,
-      "urls": [
-        "https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json"
-      ]
-    },
-    {
       "id": "shiguang",
       "name": "拾光多仓",
       "enabled": true,
@@ -131,11 +123,19 @@
       ]
     },
     {
-      "id": "wdjyys",
-      "name": "我的九阳影视",
+      "id": "jigedos",
+      "name": "jigedos",
       "enabled": true,
       "urls": [
-        "http://550.3vcn.work/wdjyys.json"
+        "https://raw.githubusercontent.com/jigedos/1024/master/jsm.json"
+      ]
+    },
+    {
+      "id": "jundie_yosakoi",
+      "name": "jundie",
+      "enabled": true,
+      "urls": [
+        "http://home.jundie.top:81/TVBox/yosakoi.json"
       ]
     },
     {
@@ -144,14 +144,6 @@
       "enabled": true,
       "urls": [
         "https://jihulab.com/tvbox4431737/tvbox/-/raw/main/tv.json"
-      ]
-    },
-    {
-      "id": "mengzhu_ysc",
-      "name": "萌主影视仓",
-      "enabled": true,
-      "urls": [
-        "https://jihulab.com/mengzhu2/ysc/-/raw/main/YSC.json"
       ]
     },
     {
@@ -176,6 +168,14 @@
       "enabled": true,
       "urls": [
         "https://gitlab.com/noimank/tvbox/-/raw/main/tvbox1.json"
+      ]
+    },
+    {
+      "id": "liangmyjj",
+      "name": "Liangmyjj",
+      "enabled": true,
+      "urls": [
+        "https://jihulab.com/Liangmyjj/tvboxx/-/raw/main/yinzuo2.json"
       ]
     }
   ]

@@ -1536,5 +1536,5 @@
   ],
   "wallpaper": "https://tool.weetai.cn/api",
   "warningText": "防止失效 关注公众号:『码点小干货』,接口免费整理维护",
-  "spider": "./libs/one.jar;md5;7f5b55c37dba231f3862cd1a8c8ea932"
+  "spider": "https://jihulab.com/mdxgh/mdxgh/-/raw/main/libs/one.jar;md5;7f5b55c37dba231f3862cd1a8c8ea932"
 }
