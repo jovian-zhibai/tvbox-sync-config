@@ -41,14 +41,6 @@
       ]
     },
     {
-      "id": "4k",
-      "name": "4K小盒子",
-      "brand": true,
-      "urls": [
-        "http://xhztv.top/4k.json"
-      ]
-    },
-    {
       "id": "xiaohezi",
       "name": "小盒子单仓",
       "brand": true,
@@ -65,14 +57,6 @@
       ]
     },
     {
-      "id": "ttkx",
-      "name": "ttkx",
-      "enabled": true,
-      "urls": [
-        "https://raw.githubusercontent.com/tmoom/ttkx/main/t.json"
-      ]
-    },
-    {
       "id": "gao_js",
       "name": "高天流云",
       "enabled": true,
@@ -82,27 +66,11 @@
       ]
     },
     {
-      "id": "gao_0825",
-      "name": "高天流云 0825",
-      "enabled": true,
-      "urls": [
-        "https://raw.githubusercontent.com/gaotianliuyun/gao/master/0825.json"
-      ]
-    },
-    {
       "id": "yydf",
       "name": "yydf 单仓",
       "enabled": true,
       "urls": [
         "https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json"
-      ]
-    },
-    {
-      "id": "yydf_xyq",
-      "name": "yydf 星月",
-      "enabled": true,
-      "urls": [
-        "https://raw.githubusercontent.com/yydfys/yydf/main/XYQTVBox/xyq.json"
       ]
     },
     {
@@ -116,7 +84,7 @@
     },
     {
       "id": "tinghao",
-      "name": "挺好分享多仓",
+      "name": "挺好多仓",
       "enabled": true,
       "urls": [
         "http://ztha.top/TVBox/GYCK.json"
@@ -124,10 +92,18 @@
     },
     {
       "id": "xh2_t3",
-      "name": "小盒子 xh2",
+      "name": "小盒子多仓",
       "enabled": true,
       "urls": [
         "https://jihulab.com/z-blog/xh2/-/raw/main/t3.json"
+      ]
+    },
+    {
+      "id": "ttkx",
+      "name": "ttkx",
+      "enabled": true,
+      "urls": [
+        "https://raw.githubusercontent.com/tmoom/ttkx/main/t.json"
       ]
     },
     {
@@ -168,6 +144,30 @@
       "enabled": true,
       "urls": [
         "https://jihulab.com/mengzhu2/ysc/-/raw/main/YSC.json"
+      ]
+    },
+    {
+      "id": "mdxgh",
+      "name": "mdxgh",
+      "enabled": true,
+      "urls": [
+        "https://jihulab.com/mdxgh/mdxgh/-/raw/main/md.json"
+      ]
+    },
+    {
+      "id": "hccx",
+      "name": "何诚茶锈",
+      "enabled": true,
+      "urls": [
+        "https://raw.githubusercontent.com/HeChengChaXiu/tvbox/main/hccx.json"
+      ]
+    },
+    {
+      "id": "noimank",
+      "name": "noimank",
+      "enabled": true,
+      "urls": [
+        "https://gitlab.com/noimank/tvbox/-/raw/main/tvbox1.json"
       ]
     }
   ]

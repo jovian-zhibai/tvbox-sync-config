@@ -20,7 +20,7 @@
 ## 一、源可用性状态
 
 <!-- STATUS_START -->
-> 🔄 最近更新：2026-11-26 16:47:59（北京时间） · 成功 **20/20** 个源
+> 🔄 最近更新：2026-11-26 16:56:20（北京时间） · 成功 **20/20** 个源
 
 | 配置源 | 状态 | 使用地址 |
 | --- | --- | --- |
@@ -28,22 +28,22 @@
 | 王二小 | ✅ 成功 | `https://d.kstore.dev/download/9280/wex.json` |
 | 老刘备 | ✅ 成功 | `https://raw.liucn.cc/box/m.json` |
 | 小马 | ✅ 成功 | `https://szyyds.cn/tv/x.json` |
-| 4K小盒子 | ✅ 成功 | `http://xhztv.top/4k.json` |
 | 小盒子单仓 | ✅ 成功 | `http://xhztv.top/xhz` |
 | 刺桐娱乐 | ✅ 成功 | `https://www.cttv.vip/ys/json/ctys.json` |
-| ttkx | ✅ 成功 | `https://raw.githubusercontent.com/tmoom/ttkx/main/t.json` |
 | 高天流云 | ✅ 成功 | `https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json` |
-| 高天流云 0825 | ✅ 成功 | `https://raw.githubusercontent.com/gaotianliuyun/gao/master/0825.json` |
 | yydf 单仓 | ✅ 成功 | `https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json` |
-| yydf 星月 | ✅ 成功 | `https://raw.githubusercontent.com/yydfys/yydf/main/XYQTVBox/xyq.json` |
-| 拾光多仓 | ✅ 成功 | `http://xmbjm.fh4u.org/dc.txt` |
-| 挺好分享多仓 | ✅ 成功 | `http://ztha.top/TVBox/GYCK.json` |
-| 小盒子 xh2 | ✅ 成功 | `https://jihulab.com/z-blog/xh2/-/raw/main/t3.json` |
+| 拾光多仓 | ✅ 成功 | `https://xmbjm.github.io/ck.json` |
+| 挺好多仓 | ✅ 成功 | `http://ztha.top/TVBox/GYCK.json` |
+| 小盒子多仓 | ✅ 成功 | `https://jihulab.com/z-blog/xh2/-/raw/main/t3.json` |
+| ttkx | ✅ 成功 | `https://raw.githubusercontent.com/tmoom/ttkx/main/t.json` |
 | tmoom xh | ✅ 成功 | `https://raw.githubusercontent.com/tmoom/xh/main/t.json` |
 | 小鱼 | ✅ 成功 | `https://6800.kstore.vip/fish.json` |
 | 我的九阳影视 | ✅ 成功 | `http://550.3vcn.work/wdjyys.json` |
 | 极简单仓 | ✅ 成功 | `https://jihulab.com/tvbox4431737/tvbox/-/raw/main/tv.json` |
 | 萌主影视仓 | ✅ 成功 | `https://jihulab.com/mengzhu2/ysc/-/raw/main/YSC.json` |
+| mdxgh | ✅ 成功 | `https://jihulab.com/mdxgh/mdxgh/-/raw/main/md.json` |
+| 何诚茶锈 | ✅ 成功 | `https://raw.githubusercontent.com/HeChengChaXiu/tvbox/main/hccx.json` |
+| noimank | ✅ 成功 | `https://gitlab.com/noimank/tvbox/-/raw/main/tvbox1.json` |
 <!-- STATUS_END -->
 
 ## 二、仓库结构
@@ -111,22 +111,22 @@ tvbox-sync-config/
 | 单仓 · 王二小 🏷️ | `https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/wangerxiao.json` | 2 个地址互为备用 |
 | 单仓 · 老刘备 🏷️ | `https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/laoliubei.json` | 3 个地址互为备用 |
 | 单仓 · 小马 🏷️ | `https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/xiaoma.json` |  |
-| 单仓 · 4K小盒子 🏷️ | `https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/4k.json` |  |
 | 单仓 · 小盒子单仓 🏷️ | `https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/xiaohezi.json` |  |
 | 单仓 · 刺桐娱乐 🏷️ | `https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/citong.json` |  |
-| 单仓 · ttkx | `https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/ttkx.json` |  |
 | 单仓 · 高天流云 | `https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/gao_js.json` | 2 个地址互为备用 |
-| 单仓 · 高天流云 0825 | `https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/gao_0825.json` |  |
 | 单仓 · yydf 单仓 | `https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/yydf.json` |  |
-| 单仓 · yydf 星月 | `https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/yydf_xyq.json` |  |
 | 单仓 · 拾光多仓 | `https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/shiguang.json` | 2 个地址互为备用 |
-| 单仓 · 挺好分享多仓 | `https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/tinghao.json` |  |
-| 单仓 · 小盒子 xh2 | `https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/xh2_t3.json` |  |
+| 单仓 · 挺好多仓 | `https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/tinghao.json` |  |
+| 单仓 · 小盒子多仓 | `https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/xh2_t3.json` |  |
+| 单仓 · ttkx | `https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/ttkx.json` |  |
 | 单仓 · tmoom xh | `https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/tmoom_xh.json` |  |
 | 单仓 · 小鱼 | `https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/fish.json` |  |
 | 单仓 · 我的九阳影视 | `https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/wdjyys.json` |  |
 | 单仓 · 极简单仓 | `https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/tvbox443.json` |  |
 | 单仓 · 萌主影视仓 | `https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/mengzhu_ysc.json` |  |
+| 单仓 · mdxgh | `https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/mdxgh.json` |  |
+| 单仓 · 何诚茶锈 | `https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/hccx.json` |  |
+| 单仓 · noimank | `https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/noimank.json` |  |
 
 > 多仓订阅与单仓文件里的地址由脚本根据 `GITHUB_REPOSITORY` 环境变量自动生成。若国内直连 raw.githubusercontent.com 慢，可套一层 `ghproxy` / `gh-proxy` 等加速前缀。
 
