@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-26 22:31:16",
+  "updated_at": "2026-11-26 23:10:36",
   "repo": "jovian-zhibai/tvbox-sync-config",
   "sources": [
     {
@@ -20,7 +20,7 @@
       "id": "wangerxiao",
       "name": "王二小",
       "ok": true,
-      "used_url": "https://d.kstore.dev/download/9280/wex.json",
+      "used_url": "https://9280.kstore.vip/newwex.json",
       "error": null
     },
     {
@@ -56,13 +56,6 @@
       "name": "高天流云",
       "ok": true,
       "used_url": "https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json",
-      "error": null
-    },
-    {
-      "id": "yydf",
-      "name": "yydf 单仓",
-      "ok": true,
-      "used_url": "https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json",
       "error": null
     },
     {
@@ -108,10 +101,18 @@
       "error": null
     },
     {
-      "id": "wdjyys",
-      "name": "我的九阳影视",
+      "id": "jigedos",
+      "name": "jigedos",
       "ok": true,
-      "used_url": "http://550.3vcn.work/wdjyys.json",
+      "used_url": "(缓存)",
+      "error": "HTTPSConnectionPool(host='raw.githubusercontent.com', port=443): Read timed out. (read timeout=15)",
+      "cached": true
+    },
+    {
+      "id": "jundie_yosakoi",
+      "name": "jundie",
+      "ok": true,
+      "used_url": "http://home.jundie.top:81/TVBox/yosakoi.json",
       "error": null
     },
     {
@@ -122,19 +123,11 @@
       "error": null
     },
     {
-      "id": "mengzhu_ysc",
-      "name": "萌主影视仓",
-      "ok": true,
-      "used_url": "https://jihulab.com/mengzhu2/ysc/-/raw/main/YSC.json",
-      "error": null
-    },
-    {
       "id": "mdxgh",
       "name": "mdxgh",
       "ok": true,
-      "used_url": "(缓存)",
-      "error": "429 Client Error: Too Many Requests for url: https://jihulab.com/mdxgh/mdxgh/-/raw/main/md.json",
-      "cached": true
+      "used_url": "https://jihulab.com/mdxgh/mdxgh/-/raw/main/md.json",
+      "error": null
     },
     {
       "id": "hccx",
@@ -148,6 +141,13 @@
       "name": "noimank",
       "ok": true,
       "used_url": "https://gitlab.com/noimank/tvbox/-/raw/main/tvbox1.json",
+      "error": null
+    },
+    {
+      "id": "liangmyjj",
+      "name": "Liangmyjj",
+      "ok": true,
+      "used_url": "https://jihulab.com/Liangmyjj/tvboxx/-/raw/main/yinzuo2.json",
       "error": null
     }
   ]
