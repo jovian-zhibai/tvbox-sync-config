@@ -2,7 +2,7 @@
   "sources": {
     "gao_js": {
       "consecutive_failures": 0,
-      "consecutive_successes": 3,
+      "consecutive_successes": 4,
       "history": [
         {
           "at": "2026-11-26 15:23:26",
@@ -21,17 +21,23 @@
           "ok": true,
           "sites": 298,
           "error": null
+        },
+        {
+          "at": "2026-11-26 16:36:11",
+          "ok": true,
+          "sites": 298,
+          "error": null
         }
       ],
-      "last_ok_at": "2026-11-26 16:33:08",
+      "last_ok_at": "2026-11-26 16:36:11",
       "last_error": null,
       "last_url": "https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json",
-      "last_check_at": "2026-11-26 16:33:08",
+      "last_check_at": "2026-11-26 16:36:11",
       "last_sites": 298
     },
     "laoliubei": {
       "consecutive_failures": 0,
-      "consecutive_successes": 3,
+      "consecutive_successes": 4,
       "history": [
         {
           "at": "2026-11-26 15:23:26",
@@ -50,17 +56,23 @@
           "ok": true,
           "sites": 234,
           "error": null
+        },
+        {
+          "at": "2026-11-26 16:36:11",
+          "ok": true,
+          "sites": 234,
+          "error": null
         }
       ],
-      "last_ok_at": "2026-11-26 16:33:08",
+      "last_ok_at": "2026-11-26 16:36:11",
       "last_error": null,
       "last_url": "https://raw.liucn.cc/box/m.json",
-      "last_check_at": "2026-11-26 16:33:08",
+      "last_check_at": "2026-11-26 16:36:11",
       "last_sites": 234
     },
     "shiguang": {
       "consecutive_failures": 0,
-      "consecutive_successes": 3,
+      "consecutive_successes": 4,
       "history": [
         {
           "at": "2026-11-26 15:23:26",
@@ -79,17 +91,23 @@
           "ok": true,
           "sites": 0,
           "error": null
+        },
+        {
+          "at": "2026-11-26 16:36:11",
+          "ok": true,
+          "sites": 0,
+          "error": null
         }
       ],
-      "last_ok_at": "2026-11-26 16:33:08",
+      "last_ok_at": "2026-11-26 16:36:11",
       "last_error": null,
       "last_url": "http://xmbjm.fh4u.org/dc.txt",
-      "last_check_at": "2026-11-26 16:33:08",
+      "last_check_at": "2026-11-26 16:36:11",
       "last_sites": 0
     },
     "yydf": {
       "consecutive_failures": 0,
-      "consecutive_successes": 3,
+      "consecutive_successes": 4,
       "history": [
         {
           "at": "2026-11-26 15:23:26",
@@ -108,17 +126,23 @@
           "ok": true,
           "sites": 193,
           "error": null
+        },
+        {
+          "at": "2026-11-26 16:36:11",
+          "ok": true,
+          "sites": 193,
+          "error": null
         }
       ],
-      "last_ok_at": "2026-11-26 16:33:08",
+      "last_ok_at": "2026-11-26 16:36:11",
       "last_error": null,
       "last_url": "https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json",
-      "last_check_at": "2026-11-26 16:33:08",
+      "last_check_at": "2026-11-26 16:36:11",
       "last_sites": 193
     },
     "xh2_t3": {
       "consecutive_failures": 0,
-      "consecutive_successes": 3,
+      "consecutive_successes": 4,
       "history": [
         {
           "at": "2026-11-26 15:23:26",
@@ -137,17 +161,23 @@
           "ok": true,
           "sites": 0,
           "error": null
+        },
+        {
+          "at": "2026-11-26 16:36:11",
+          "ok": true,
+          "sites": 0,
+          "error": null
         }
       ],
-      "last_ok_at": "2026-11-26 16:33:08",
+      "last_ok_at": "2026-11-26 16:36:11",
       "last_error": null,
       "last_url": "https://jihulab.com/z-blog/xh2/-/raw/main/t3.json",
-      "last_check_at": "2026-11-26 16:33:08",
+      "last_check_at": "2026-11-26 16:36:11",
       "last_sites": 0
     },
     "ttkx": {
       "consecutive_failures": 0,
-      "consecutive_successes": 3,
+      "consecutive_successes": 4,
       "history": [
         {
           "at": "2026-11-26 15:23:26",
@@ -166,17 +196,23 @@
           "ok": true,
           "sites": 126,
           "error": null
+        },
+        {
+          "at": "2026-11-26 16:36:11",
+          "ok": true,
+          "sites": 126,
+          "error": null
         }
       ],
-      "last_ok_at": "2026-11-26 16:33:08",
+      "last_ok_at": "2026-11-26 16:36:11",
       "last_error": null,
       "last_url": "https://raw.githubusercontent.com/tmoom/ttkx/main/t.json",
-      "last_check_at": "2026-11-26 16:33:08",
+      "last_check_at": "2026-11-26 16:36:11",
       "last_sites": 126
     },
     "gao_0825": {
       "consecutive_failures": 0,
-      "consecutive_successes": 3,
+      "consecutive_successes": 4,
       "history": [
         {
           "at": "2026-11-26 15:23:26",
@@ -195,17 +231,23 @@
           "ok": true,
           "sites": 135,
           "error": null
+        },
+        {
+          "at": "2026-11-26 16:36:11",
+          "ok": true,
+          "sites": 135,
+          "error": null
         }
       ],
-      "last_ok_at": "2026-11-26 16:33:08",
+      "last_ok_at": "2026-11-26 16:36:11",
       "last_error": null,
       "last_url": "https://raw.githubusercontent.com/gaotianliuyun/gao/master/0825.json",
-      "last_check_at": "2026-11-26 16:33:08",
+      "last_check_at": "2026-11-26 16:36:11",
       "last_sites": 135
     },
     "tvbox443": {
       "consecutive_failures": 0,
-      "consecutive_successes": 3,
+      "consecutive_successes": 4,
       "history": [
         {
           "at": "2026-11-26 15:23:26",
@@ -224,17 +266,23 @@
           "ok": true,
           "sites": 140,
           "error": null
+        },
+        {
+          "at": "2026-11-26 16:36:11",
+          "ok": true,
+          "sites": 140,
+          "error": null
         }
       ],
-      "last_ok_at": "2026-11-26 16:33:08",
+      "last_ok_at": "2026-11-26 16:36:11",
       "last_error": null,
       "last_url": "https://jihulab.com/tvbox4431737/tvbox/-/raw/main/tv.json",
-      "last_check_at": "2026-11-26 16:33:08",
+      "last_check_at": "2026-11-26 16:36:11",
       "last_sites": 140
     },
     "yydf_xyq": {
       "consecutive_failures": 0,
-      "consecutive_successes": 3,
+      "consecutive_successes": 4,
       "history": [
         {
           "at": "2026-11-26 15:23:26",
@@ -253,17 +301,23 @@
           "ok": true,
           "sites": 126,
           "error": null
+        },
+        {
+          "at": "2026-11-26 16:36:11",
+          "ok": true,
+          "sites": 126,
+          "error": null
         }
       ],
-      "last_ok_at": "2026-11-26 16:33:08",
+      "last_ok_at": "2026-11-26 16:36:11",
       "last_error": null,
       "last_url": "https://raw.githubusercontent.com/yydfys/yydf/main/XYQTVBox/xyq.json",
-      "last_check_at": "2026-11-26 16:33:08",
+      "last_check_at": "2026-11-26 16:36:11",
       "last_sites": 126
     },
     "tinghao": {
       "consecutive_failures": 0,
-      "consecutive_successes": 3,
+      "consecutive_successes": 4,
       "history": [
         {
           "at": "2026-11-26 15:23:26",
@@ -282,17 +336,23 @@
           "ok": true,
           "sites": 0,
           "error": null
+        },
+        {
+          "at": "2026-11-26 16:36:11",
+          "ok": true,
+          "sites": 0,
+          "error": null
         }
       ],
-      "last_ok_at": "2026-11-26 16:33:08",
+      "last_ok_at": "2026-11-26 16:36:11",
       "last_error": null,
       "last_url": "http://ztha.top/TVBox/GYCK.json",
-      "last_check_at": "2026-11-26 16:33:08",
+      "last_check_at": "2026-11-26 16:36:11",
       "last_sites": 0
     },
     "fish": {
       "consecutive_failures": 0,
-      "consecutive_successes": 3,
+      "consecutive_successes": 4,
       "history": [
         {
           "at": "2026-11-26 15:23:26",
@@ -311,17 +371,23 @@
           "ok": true,
           "sites": 111,
           "error": null
+        },
+        {
+          "at": "2026-11-26 16:36:11",
+          "ok": true,
+          "sites": 111,
+          "error": null
         }
       ],
-      "last_ok_at": "2026-11-26 16:33:08",
+      "last_ok_at": "2026-11-26 16:36:11",
       "last_error": null,
       "last_url": "https://6800.kstore.vip/fish.json",
-      "last_check_at": "2026-11-26 16:33:08",
+      "last_check_at": "2026-11-26 16:36:11",
       "last_sites": 111
     },
     "wdjyys": {
       "consecutive_failures": 0,
-      "consecutive_successes": 3,
+      "consecutive_successes": 4,
       "history": [
         {
           "at": "2026-11-26 15:23:26",
@@ -340,17 +406,23 @@
           "ok": true,
           "sites": 106,
           "error": null
+        },
+        {
+          "at": "2026-11-26 16:36:11",
+          "ok": true,
+          "sites": 106,
+          "error": null
         }
       ],
-      "last_ok_at": "2026-11-26 16:33:08",
+      "last_ok_at": "2026-11-26 16:36:11",
       "last_error": null,
       "last_url": "http://550.3vcn.work/wdjyys.json",
-      "last_check_at": "2026-11-26 16:33:08",
+      "last_check_at": "2026-11-26 16:36:11",
       "last_sites": 106
     },
     "wangerxiao": {
       "consecutive_failures": 0,
-      "consecutive_successes": 3,
+      "consecutive_successes": 4,
       "history": [
         {
           "at": "2026-11-26 15:23:26",
@@ -369,17 +441,23 @@
           "ok": true,
           "sites": 95,
           "error": null
+        },
+        {
+          "at": "2026-11-26 16:36:11",
+          "ok": true,
+          "sites": 95,
+          "error": null
         }
       ],
-      "last_ok_at": "2026-11-26 16:33:08",
+      "last_ok_at": "2026-11-26 16:36:11",
       "last_error": null,
       "last_url": "https://d.kstore.dev/download/9280/wex.json",
-      "last_check_at": "2026-11-26 16:33:08",
+      "last_check_at": "2026-11-26 16:36:11",
       "last_sites": 95
     },
     "tmoom_xh": {
       "consecutive_failures": 0,
-      "consecutive_successes": 3,
+      "consecutive_successes": 4,
       "history": [
         {
           "at": "2026-11-26 15:23:26",
@@ -398,17 +476,23 @@
           "ok": true,
           "sites": 90,
           "error": null
+        },
+        {
+          "at": "2026-11-26 16:36:11",
+          "ok": true,
+          "sites": 90,
+          "error": null
         }
       ],
-      "last_ok_at": "2026-11-26 16:33:08",
+      "last_ok_at": "2026-11-26 16:36:11",
       "last_error": null,
       "last_url": "https://raw.githubusercontent.com/tmoom/xh/main/t.json",
-      "last_check_at": "2026-11-26 16:33:08",
+      "last_check_at": "2026-11-26 16:36:11",
       "last_sites": 90
     },
     "mengzhu_ysc": {
       "consecutive_failures": 0,
-      "consecutive_successes": 3,
+      "consecutive_successes": 4,
       "history": [
         {
           "at": "2026-11-26 15:23:26",
@@ -427,17 +511,23 @@
           "ok": true,
           "sites": 86,
           "error": null
+        },
+        {
+          "at": "2026-11-26 16:36:11",
+          "ok": true,
+          "sites": 86,
+          "error": null
         }
       ],
-      "last_ok_at": "2026-11-26 16:33:08",
+      "last_ok_at": "2026-11-26 16:36:11",
       "last_error": null,
       "last_url": "https://jihulab.com/mengzhu2/ysc/-/raw/main/YSC.json",
-      "last_check_at": "2026-11-26 16:33:08",
+      "last_check_at": "2026-11-26 16:36:11",
       "last_sites": 86
     },
     "xiaoma": {
       "consecutive_failures": 0,
-      "consecutive_successes": 3,
+      "consecutive_successes": 4,
       "history": [
         {
           "at": "2026-11-26 15:23:26",
@@ -456,12 +546,18 @@
           "ok": true,
           "sites": 62,
           "error": null
+        },
+        {
+          "at": "2026-11-26 16:36:11",
+          "ok": true,
+          "sites": 62,
+          "error": null
         }
       ],
-      "last_ok_at": "2026-11-26 16:33:08",
+      "last_ok_at": "2026-11-26 16:36:11",
       "last_error": null,
       "last_url": "https://szyyds.cn/tv/x.json",
-      "last_check_at": "2026-11-26 16:33:08",
+      "last_check_at": "2026-11-26 16:36:11",
       "last_sites": 62
     },
     "xhztv_dc": {
@@ -534,7 +630,7 @@
     },
     "feimao": {
       "consecutive_failures": 0,
-      "consecutive_successes": 2,
+      "consecutive_successes": 3,
       "history": [
         {
           "at": "2026-11-26 15:46:20",
@@ -547,17 +643,23 @@
           "ok": true,
           "sites": 40,
           "error": null
+        },
+        {
+          "at": "2026-11-26 16:36:11",
+          "ok": true,
+          "sites": 40,
+          "error": null
         }
       ],
-      "last_ok_at": "2026-11-26 16:33:08",
+      "last_ok_at": "2026-11-26 16:36:11",
       "last_error": null,
       "last_url": "https://6296.kstore.vip/facat.json",
-      "last_check_at": "2026-11-26 16:33:08",
+      "last_check_at": "2026-11-26 16:36:11",
       "last_sites": 40
     },
     "4k": {
       "consecutive_failures": 0,
-      "consecutive_successes": 2,
+      "consecutive_successes": 3,
       "history": [
         {
           "at": "2026-11-26 15:46:20",
@@ -570,17 +672,23 @@
           "ok": true,
           "sites": 53,
           "error": null
+        },
+        {
+          "at": "2026-11-26 16:36:11",
+          "ok": true,
+          "sites": 53,
+          "error": null
         }
       ],
-      "last_ok_at": "2026-11-26 16:33:08",
+      "last_ok_at": "2026-11-26 16:36:11",
       "last_error": null,
       "last_url": "http://xhztv.top/4k.json",
-      "last_check_at": "2026-11-26 16:33:08",
+      "last_check_at": "2026-11-26 16:36:11",
       "last_sites": 53
     },
     "xiaohezi": {
       "consecutive_failures": 0,
-      "consecutive_successes": 2,
+      "consecutive_successes": 3,
       "history": [
         {
           "at": "2026-11-26 15:46:20",
@@ -593,17 +701,23 @@
           "ok": true,
           "sites": 54,
           "error": null
+        },
+        {
+          "at": "2026-11-26 16:36:11",
+          "ok": true,
+          "sites": 54,
+          "error": null
         }
       ],
-      "last_ok_at": "2026-11-26 16:33:08",
+      "last_ok_at": "2026-11-26 16:36:11",
       "last_error": null,
       "last_url": "http://xhztv.top/xhz",
-      "last_check_at": "2026-11-26 16:33:08",
+      "last_check_at": "2026-11-26 16:36:11",
       "last_sites": 54
     },
     "citong": {
       "consecutive_failures": 0,
-      "consecutive_successes": 2,
+      "consecutive_successes": 3,
       "history": [
         {
           "at": "2026-11-26 15:46:20",
@@ -616,16 +730,22 @@
           "ok": true,
           "sites": 51,
           "error": null
+        },
+        {
+          "at": "2026-11-26 16:36:11",
+          "ok": true,
+          "sites": 51,
+          "error": null
         }
       ],
-      "last_ok_at": "2026-11-26 16:33:08",
+      "last_ok_at": "2026-11-26 16:36:11",
       "last_error": null,
       "last_url": "https://www.cttv.vip/ys/json/ctys.json",
-      "last_check_at": "2026-11-26 16:33:08",
+      "last_check_at": "2026-11-26 16:36:11",
       "last_sites": 51
     }
   },
-  "updated_at": "2026-11-26 16:33:08",
+  "updated_at": "2026-11-26 16:36:11",
   "summary": {
     "total": 20,
     "healthy": 20,
