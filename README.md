@@ -195,6 +195,34 @@ pip install -r requirements.txt
 REPO=jovian-zhibai/tvbox-sync-config python scripts/update.py
 ```
 
+### 用 sync.sh 同步并推送
+
+本地跑过 `update.py` 后再 `git push`，经常会撞上 Actions 刚提交的产物
+（`output/*.json`、README 状态表），产生冲突。这些文件都是同一套脚本
+生成的，手工解冲突纯属浪费。`scripts/sync.sh` 把这套流程固化了：
+
+```bash
+./scripts/sync.sh            # 拉取 + 解决生成物冲突 + 重新生成 + 推送
+./scripts/sync.sh --no-push  # 只同步不推送
+./scripts/sync.sh --dry-run  # 只看会做什么，不改任何文件
+```
+
+它按文件类型区别对待：
+
+| 冲突文件 | 处理方式 |
+| --- | --- |
+| `output/*.json`、`README.md` | 自动接受远端版本，随后重跑 `update.py` 重新生成 |
+| `config/**`、`scripts/**` 等 | **停下并退出（码 3）**，由你决定 |
+
+配置文件不自动合并是刻意的——`sources.json` 冲突意味着两边改了源列表，
+合并错了会直接让订阅出错，这种判断不该交给脚本。
+
+退出码：`0` 正常、`1` 前置检查未通过（有未提交改动 / rebase 未完成）、
+`3` 有需人工处理的冲突、`4` 生成失败、`5` 推送失败。
+
+> 脚本内部有个容易踩的坑：`git rebase` 时 `--ours` 指的是**远端**，
+> `--theirs` 才是本地提交，与 merge 时相反。代码里显式注释了这点。
+
 ## 八、脚本特性
 
 - **中文域名自动转 punycode**：`饭太硬.com` → `xn--sss604efuw.com`，避免 DNS 解析失败。
