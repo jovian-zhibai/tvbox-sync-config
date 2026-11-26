@@ -65,12 +65,44 @@
       ]
     },
     {
+      "id": "ttkx",
+      "name": "ttkx",
+      "enabled": true,
+      "urls": [
+        "https://raw.githubusercontent.com/tmoom/ttkx/main/t.json"
+      ]
+    },
+    {
       "id": "gao_js",
-      "name": "高天流云 js",
+      "name": "高天流云",
       "enabled": true,
       "urls": [
         "https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json",
         "https://gh-proxy.com/https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json"
+      ]
+    },
+    {
+      "id": "gao_0825",
+      "name": "高天流云 0825",
+      "enabled": true,
+      "urls": [
+        "https://raw.githubusercontent.com/gaotianliuyun/gao/master/0825.json"
+      ]
+    },
+    {
+      "id": "yydf",
+      "name": "yydf 单仓",
+      "enabled": true,
+      "urls": [
+        "https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json"
+      ]
+    },
+    {
+      "id": "yydf_xyq",
+      "name": "yydf 星月",
+      "enabled": true,
+      "urls": [
+        "https://raw.githubusercontent.com/yydfys/yydf/main/XYQTVBox/xyq.json"
       ]
     },
     {
@@ -83,59 +115,27 @@
       ]
     },
     {
-      "id": "yydf",
-      "name": "yydf 单仓",
+      "id": "tinghao",
+      "name": "挺好分享多仓",
       "enabled": true,
       "urls": [
-        "https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json"
+        "http://ztha.top/TVBox/GYCK.json"
       ]
     },
     {
       "id": "xh2_t3",
-      "name": "小盒子多仓 xh2",
+      "name": "小盒子 xh2",
       "enabled": true,
       "urls": [
         "https://jihulab.com/z-blog/xh2/-/raw/main/t3.json"
       ]
     },
     {
-      "id": "ttkx",
-      "name": "ttkx",
+      "id": "tmoom_xh",
+      "name": "tmoom xh",
       "enabled": true,
       "urls": [
-        "https://raw.githubusercontent.com/tmoom/ttkx/main/t.json"
-      ]
-    },
-    {
-      "id": "gao_0825",
-      "name": "高天流云 0825",
-      "enabled": true,
-      "urls": [
-        "https://raw.githubusercontent.com/gaotianliuyun/gao/master/0825.json"
-      ]
-    },
-    {
-      "id": "tvbox443",
-      "name": "极简单仓 140站",
-      "enabled": true,
-      "urls": [
-        "https://jihulab.com/tvbox4431737/tvbox/-/raw/main/tv.json"
-      ]
-    },
-    {
-      "id": "yydf_xyq",
-      "name": "yydf 星月情",
-      "enabled": true,
-      "urls": [
-        "https://raw.githubusercontent.com/yydfys/yydf/main/XYQTVBox/xyq.json"
-      ]
-    },
-    {
-      "id": "tinghao",
-      "name": "挺好分享多仓",
-      "enabled": true,
-      "urls": [
-        "http://ztha.top/TVBox/GYCK.json"
+        "https://raw.githubusercontent.com/tmoom/xh/main/t.json"
       ]
     },
     {
@@ -155,11 +155,11 @@
       ]
     },
     {
-      "id": "tmoom_xh",
-      "name": "tmoom/xh",
+      "id": "tvbox443",
+      "name": "极简单仓",
       "enabled": true,
       "urls": [
-        "https://raw.githubusercontent.com/tmoom/xh/main/t.json"
+        "https://jihulab.com/tvbox4431737/tvbox/-/raw/main/tv.json"
       ]
     },
     {

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-26 15:51:11",
+  "updated_at": "2026-11-26 16:46:47",
   "repo": "jovian-zhibai/tvbox-sync-config",
   "sources": [
     {
@@ -52,38 +52,17 @@
       "error": null
     },
     {
-      "id": "gao_js",
-      "name": "高天流云 js",
-      "ok": true,
-      "used_url": "https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json",
-      "error": null
-    },
-    {
-      "id": "shiguang",
-      "name": "拾光多仓",
-      "ok": true,
-      "used_url": "http://xmbjm.fh4u.org/dc.txt",
-      "error": null
-    },
-    {
-      "id": "yydf",
-      "name": "yydf 单仓",
-      "ok": true,
-      "used_url": "https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json",
-      "error": null
-    },
-    {
-      "id": "xh2_t3",
-      "name": "小盒子多仓 xh2",
-      "ok": true,
-      "used_url": "https://jihulab.com/z-blog/xh2/-/raw/main/t3.json",
-      "error": null
-    },
-    {
       "id": "ttkx",
       "name": "ttkx",
       "ok": true,
       "used_url": "https://raw.githubusercontent.com/tmoom/ttkx/main/t.json",
+      "error": null
+    },
+    {
+      "id": "gao_js",
+      "name": "高天流云",
+      "ok": true,
+      "used_url": "https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json",
       "error": null
     },
     {
@@ -94,17 +73,24 @@
       "error": null
     },
     {
-      "id": "tvbox443",
-      "name": "极简单仓 140站",
+      "id": "yydf",
+      "name": "yydf 单仓",
       "ok": true,
-      "used_url": "https://jihulab.com/tvbox4431737/tvbox/-/raw/main/tv.json",
+      "used_url": "https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json",
       "error": null
     },
     {
       "id": "yydf_xyq",
-      "name": "yydf 星月情",
+      "name": "yydf 星月",
       "ok": true,
       "used_url": "https://raw.githubusercontent.com/yydfys/yydf/main/XYQTVBox/xyq.json",
+      "error": null
+    },
+    {
+      "id": "shiguang",
+      "name": "拾光多仓",
+      "ok": true,
+      "used_url": "http://xmbjm.fh4u.org/dc.txt",
       "error": null
     },
     {
@@ -112,6 +98,20 @@
       "name": "挺好分享多仓",
       "ok": true,
       "used_url": "http://ztha.top/TVBox/GYCK.json",
+      "error": null
+    },
+    {
+      "id": "xh2_t3",
+      "name": "小盒子 xh2",
+      "ok": true,
+      "used_url": "https://jihulab.com/z-blog/xh2/-/raw/main/t3.json",
+      "error": null
+    },
+    {
+      "id": "tmoom_xh",
+      "name": "tmoom xh",
+      "ok": true,
+      "used_url": "https://raw.githubusercontent.com/tmoom/xh/main/t.json",
       "error": null
     },
     {
@@ -129,10 +129,10 @@
       "error": null
     },
     {
-      "id": "tmoom_xh",
-      "name": "tmoom/xh",
+      "id": "tvbox443",
+      "name": "极简单仓",
       "ok": true,
-      "used_url": "https://raw.githubusercontent.com/tmoom/xh/main/t.json",
+      "used_url": "https://jihulab.com/tvbox4431737/tvbox/-/raw/main/tv.json",
       "error": null
     },
     {
