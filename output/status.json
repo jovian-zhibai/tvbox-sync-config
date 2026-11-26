@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-26 16:47:59",
+  "updated_at": "2026-11-26 17:00:00",
   "repo": "jovian-zhibai/tvbox-sync-config",
   "sources": [
     {
@@ -31,13 +31,6 @@
       "error": null
     },
     {
-      "id": "4k",
-      "name": "4K小盒子",
-      "ok": true,
-      "used_url": "http://xhztv.top/4k.json",
-      "error": null
-    },
-    {
       "id": "xiaohezi",
       "name": "小盒子单仓",
       "ok": true,
@@ -52,13 +45,6 @@
       "error": null
     },
     {
-      "id": "ttkx",
-      "name": "ttkx",
-      "ok": true,
-      "used_url": "https://raw.githubusercontent.com/tmoom/ttkx/main/t.json",
-      "error": null
-    },
-    {
       "id": "gao_js",
       "name": "高天流云",
       "ok": true,
@@ -66,24 +52,10 @@
       "error": null
     },
     {
-      "id": "gao_0825",
-      "name": "高天流云 0825",
-      "ok": true,
-      "used_url": "https://raw.githubusercontent.com/gaotianliuyun/gao/master/0825.json",
-      "error": null
-    },
-    {
       "id": "yydf",
       "name": "yydf 单仓",
       "ok": true,
       "used_url": "https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json",
-      "error": null
-    },
-    {
-      "id": "yydf_xyq",
-      "name": "yydf 星月",
-      "ok": true,
-      "used_url": "https://raw.githubusercontent.com/yydfys/yydf/main/XYQTVBox/xyq.json",
       "error": null
     },
     {
@@ -95,16 +67,23 @@
     },
     {
       "id": "tinghao",
-      "name": "挺好分享多仓",
+      "name": "挺好多仓",
       "ok": true,
       "used_url": "http://ztha.top/TVBox/GYCK.json",
       "error": null
     },
     {
       "id": "xh2_t3",
-      "name": "小盒子 xh2",
+      "name": "小盒子多仓",
       "ok": true,
       "used_url": "https://jihulab.com/z-blog/xh2/-/raw/main/t3.json",
+      "error": null
+    },
+    {
+      "id": "ttkx",
+      "name": "ttkx",
+      "ok": true,
+      "used_url": "https://raw.githubusercontent.com/tmoom/ttkx/main/t.json",
       "error": null
     },
     {
@@ -140,6 +119,27 @@
       "name": "萌主影视仓",
       "ok": true,
       "used_url": "https://jihulab.com/mengzhu2/ysc/-/raw/main/YSC.json",
+      "error": null
+    },
+    {
+      "id": "mdxgh",
+      "name": "mdxgh",
+      "ok": true,
+      "used_url": "https://jihulab.com/mdxgh/mdxgh/-/raw/main/md.json",
+      "error": null
+    },
+    {
+      "id": "hccx",
+      "name": "何诚茶锈",
+      "ok": true,
+      "used_url": "https://raw.githubusercontent.com/HeChengChaXiu/tvbox/main/hccx.json",
+      "error": null
+    },
+    {
+      "id": "noimank",
+      "name": "noimank",
+      "ok": true,
+      "used_url": "https://gitlab.com/noimank/tvbox/-/raw/main/tvbox1.json",
       "error": null
     }
   ]

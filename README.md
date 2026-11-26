@@ -20,7 +20,7 @@
 ## 一、源可用性状态
 
 <!-- STATUS_START -->
-> 🔄 最近更新：2026-11-26 16:56:20（北京时间） · 成功 **20/20** 个源
+> 🔄 最近更新：2026-11-26 17:00:00（北京时间） · 成功 **20/20** 个源
 
 | 配置源 | 状态 | 使用地址 |
 | --- | --- | --- |
@@ -32,7 +32,7 @@
 | 刺桐娱乐 | ✅ 成功 | `https://www.cttv.vip/ys/json/ctys.json` |
 | 高天流云 | ✅ 成功 | `https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json` |
 | yydf 单仓 | ✅ 成功 | `https://raw.githubusercontent.com/yydfys/yydf/main/yydf/yydfjk.json` |
-| 拾光多仓 | ✅ 成功 | `https://xmbjm.github.io/ck.json` |
+| 拾光多仓 | ✅ 成功 | `http://xmbjm.fh4u.org/dc.txt` |
 | 挺好多仓 | ✅ 成功 | `http://ztha.top/TVBox/GYCK.json` |
 | 小盒子多仓 | ✅ 成功 | `https://jihulab.com/z-blog/xh2/-/raw/main/t3.json` |
 | ttkx | ✅ 成功 | `https://raw.githubusercontent.com/tmoom/ttkx/main/t.json` |
