@@ -1,0 +1,56 @@
+name: Discover New Sources
+
+# 源发现：从公开聚合页抓地址 → 候选池 → 连续两轮通过才晋升。
+# 每周跑一次就够 —— 新的 TVBox 配置源不是每天冒出来的，
+# 跑太勤只会重复探测同一批地址。
+"on":
+  schedule:
+    # 每周一 03:00 UTC（北京 11:00）
+    - cron: "0 3 * * 1"
+  workflow_dispatch:
+    inputs:
+      no_promote:
+        description: "只更新候选池，不自动晋升（勾选后不会改动正式源）"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: tvbox-config-write
+      cancel-in-progress: false
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Discover and promote
+        run: |
+          if [ "${{ inputs.no_promote }}" = "true" ]; then
+            python scripts/discover.py --no-promote
+          else
+            python scripts/discover.py
+          fi
+
+      - name: Commit changes
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add config/sources.json config/candidates.json
+          if git diff --cached --quiet; then
+            echo "::notice::候选池与源列表无变化"
+          else
+            git commit -m "chore(discover): 源发现与晋升 $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git push origin main
+            echo "::notice::已更新源列表"
+          fi

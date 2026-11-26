@@ -31,7 +31,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONFIG_FILE = os.path.join(ROOT, "config", "sources.json")
 OUTPUT_DIR = os.path.join(ROOT, "output")
 
-DEFAULT_REPO = "YOUR_USERNAME/tvbox-ysc-config"  # 本地运行时的占位仓库名，GitHub Actions 会自动覆盖
+DEFAULT_REPO = "jovian-zhibai/tvbox-sync-config"  # 本地运行时的默认仓库名，GitHub Actions 会用 GITHUB_REPOSITORY 覆盖
 
 # 注意：部分接口的反爬会针对"完整 Chrome UA"下发挑战页，反而用简洁 UA 能正常返回 JSON
 USER_AGENT = "Mozilla/5.0"
@@ -237,7 +237,9 @@ def update_readme(status, ok_count, total):
     lines.append("| 配置源 | 状态 | 使用地址 |")
     lines.append("| --- | --- | --- |")
     for s in status["sources"]:
-        if s.get("cached"):
+        if s.get("disabled"):
+            lines.append(f"| {s['name']} | ⏸️ 已停用 | 连续失败已下线，等待恢复后自动上线 |")
+        elif s.get("cached"):
             lines.append(f"| {s['name']} | 📦 缓存 | 上次成功配置（本次更新未抓到，沿用缓存） |")
         elif s["ok"]:
             lines.append(f"| {s['name']} | ✅ 成功 | `{s['used_url']}` |")
@@ -301,6 +303,16 @@ def main() -> int:
         sid = src.get("id", name)
         urls = src.get("urls", [])
 
+        # health.py 会把连续失败的源标记为 enabled=false；跳过它们，
+        # 但保留在配置文件里，恢复后可以直接改回来。
+        if src.get("enabled", True) is False:
+            print(f"[SKIP] {name}  已被健康检查下线")
+            status["sources"].append(
+                {"id": sid, "name": name, "ok": False, "used_url": None,
+                 "error": "已停用（健康检查连续失败）", "disabled": True}
+            )
+            continue
+
         entry = {"id": sid, "name": name, "ok": False, "used_url": None, "error": None}
         saved = False
 
@@ -355,6 +367,20 @@ def main() -> int:
 
         # 源之间稍作间隔，避免集中请求被限流
         time.sleep(SOURCE_INTERVAL)
+
+    # 清理已从配置里删掉的源留下的过期产物，
+    # 否则那些订阅地址依然返回 200，用户会一直拿到早已下线的旧数据。
+    keep_files = {f"{src.get('id', src.get('name'))}.json" for src in cfg.get("sources", [])}
+    keep_files |= {"多仓订阅.json", "单仓聚合.json", "status.json", "shield.json"}
+    for fname in os.listdir(OUTPUT_DIR):
+        if not fname.endswith(".json") or fname in keep_files:
+            continue
+        stale = os.path.join(OUTPUT_DIR, fname)
+        try:
+            os.remove(stale)
+            print(f"[CLEAN] 删除过期产物 {fname}")
+        except OSError as e:
+            print(f"[WARN] 无法删除 {fname}: {e}", file=sys.stderr)
 
     # 生成多仓订阅文件（影视仓"订阅/多仓"格式）
     sub_path = os.path.join(OUTPUT_DIR, "多仓订阅.json")

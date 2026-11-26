@@ -24,7 +24,9 @@ jobs:
   update:
     runs-on: ubuntu-latest
     concurrency:
-      group: auto-update
+      # 与 health.yml / discover.yml 共用一把锁：
+      # 三个工作流都会写 config/sources.json，必须串行
+      group: tvbox-config-write
       cancel-in-progress: false
 
     steps:
