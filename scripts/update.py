@@ -18,6 +18,7 @@
 用法：
   python scripts/update.py
 """
+import base64
 import datetime
 import json
 import os
@@ -54,6 +55,29 @@ def _strip_js_comments(text: str) -> str:
     lines = text.split("\n")
     cleaned = [ln for ln in lines if not ln.lstrip().startswith("//")]
     return "\n".join(cleaned)
+
+
+def _unwrap_image_payload(content: bytes):
+    """解开"伪装成图片"的配置。
+
+    有些接口（如饭太硬 www.饭太硬.net/tv）返回的不是 JSON，而是一张真
+    JPEG 图片，图片数据之后用 "**" 分隔，再跟一段 base64 编码的 JSON：
+
+        <JPEG 二进制>**<base64 的 JSON>
+
+    这样做的目的是绕过某些网络环境对 .json 的拦截。直接当 JSON 解析必然
+    失败，会被误判成"源已失效"，而实际上源一直好好活着。
+
+    仅当内容确实以 JPEG 魔数 FFD8 开头、且含 "**" 时才解包，
+    其余情况返回 None，交回常规的 JSON 解析路径。
+    """
+    if not content.startswith(b"\xff\xd8") or b"**" not in content:
+        return None
+    tail = content.split(b"**", 1)[1]
+    try:
+        return base64.b64decode(tail).decode("utf-8", "replace")
+    except Exception:
+        return None
 
 
 def parse_json_lenient(text: str):
@@ -123,14 +147,12 @@ def absolutize_spider(data: dict, source_url: str) -> dict:
         scheme = m.group(1) or "https"
         host = m.group(2)
         rest = m.group(3) or ""
-        direct = f"{scheme}://{host}{rest}"
-        try:
-            r = requests.head(direct, timeout=8, allow_redirects=True,
-                              headers={"User-Agent": USER_AGENT})
-            if r.status_code < 400:
-                path = direct
-        except Exception:
-            pass  # 直连不通就保留原代理地址
+        # 直接还原，不做网络探测。
+        # 之前用 HEAD/GET 先探一次直连，但这类探测本身会受网络抖动影响：
+        # 同一地址前一次 200、后一次超时，就会退回代理；等代理真正挂掉时
+        # spider 已经不可用了。代理只是额外的一跳，目标站才是权威，
+        # 所以无条件去掉代理前缀更稳。
+        path = f"{scheme}://{host}{rest}"
 
     if not path.startswith(("./", "../", "/")) and not path.startswith("."):
         base = path  # 已经是绝对地址，直接用
@@ -171,8 +193,13 @@ def _should_retry(err: Exception, resp_text_len: int = -1) -> bool:
     return False
 
 
-def fetch_config(url: str) -> dict:
-    """抓取单个地址并解析为 JSON dict；失败时抛出异常。"""
+def fetch_config(url: str, ua: str | None = None) -> dict:
+    """抓取单个地址并解析为 JSON dict；失败时抛出异常。
+
+    ua: 可选的自定义 User-Agent。少数源会按 UA 区分返回内容，
+        例如饭太硬只在 okhttp UA 下才返回真配置，其他 UA 拿到的是
+        HTML 引导页 —— 表面 200 成功，实际全是废数据。
+    """
     target = idn_encode(url)
     last_err = None
     for attempt in range(1, MAX_RETRIES + 1):
@@ -180,14 +207,16 @@ def fetch_config(url: str) -> dict:
             resp = requests.get(
                 target,
                 headers={
-                    "User-Agent": USER_AGENT,
+                    "User-Agent": ua or USER_AGENT,
                     "Accept": "application/json,text/plain,*/*",
                 },
                 timeout=TIMEOUT,
                 allow_redirects=True,
             )
             resp.raise_for_status()
-            data = parse_json_lenient(resp.text)
+            # 少数接口把配置伪装成 JPEG：图片后跟 "**" + base64(JSON)
+            unwrapped = _unwrap_image_payload(resp.content)
+            data = parse_json_lenient(unwrapped if unwrapped else resp.text)
             if not is_valid_tvbox_config(data):
                 raise ValueError("返回内容不是 TVBox 配置（缺少 sites/spiders/lives 或 urls 字段）")
             return data
@@ -366,10 +395,11 @@ def main() -> int:
 
         entry = {"id": sid, "name": name, "ok": False, "used_url": None, "error": None}
         saved = False
+        src_ua = src.get("ua")
 
         for url in urls:
             try:
-                data = fetch_config(url)
+                data = fetch_config(url, ua=src_ua)
                 data = absolutize_spider(data, url)
                 out_path = os.path.join(OUTPUT_DIR, f"{sid}.json")
                 with open(out_path, "w", encoding="utf-8") as f:

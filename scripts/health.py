@@ -50,10 +50,37 @@ def load_json(path, default):
         return default
 
 
-def probe(url):
+def check_spider(data, source_url):
+    """检查 spider（解析器 jar）能否下载。
+
+    只校验配置本身是不够的：spider 取不到时站点列表照样能显示，
+    用户点开视频才发现全废。这是"看起来健康、实际不可用"的主要来源，
+    所以纳入健康判定。
+    """
+    spider = data.get("spider")
+    if not spider:
+        return True, None
+    url = str(spider).split(";")[0]
+    try:
+        import requests
+        r = requests.get(url, timeout=20, stream=True,
+                         headers={"User-Agent": "Mozilla/5.0"}, allow_redirects=True)
+        chunk = next(r.iter_content(1024), b"")
+        code = r.status_code
+        r.close()
+        if code >= 400 or not chunk:
+            return False, f"spider 不可下载（HTTP {code}）"
+        return True, None
+    except Exception as e:  # noqa: BLE001
+        # 网络抖动很常见，单次失败不直接判死，记下来但不影响健康状态，
+        # 由 update.py 输出时再处理。
+        return True, f"spider 检查未通过：{type(e).__name__}"
+
+
+def probe(url, ua=None):
     """返回 (ok, 详情)。复用 update.fetch_config，保证和正式流程判定一致。"""
     try:
-        data = update.fetch_config(url)
+        data = update.fetch_config(url, ua=ua)
     except Exception as e:  # noqa: BLE001
         return False, {"error": str(e)[:200]}
 
@@ -66,20 +93,29 @@ def probe(url):
     if not children and count < MIN_SITES:
         return False, {"error": f"站点数过少（{count} < {MIN_SITES}），疑似空壳"}
 
-    return True, {
+    # spider 硬失效（明确 4xx/空内容）才判死
+    spider_ok, spider_note = check_spider(data, url)
+    if not spider_ok:
+        return False, {"error": spider_note}
+
+    detail = {
         "kind": "multi" if children else "single",
         "sites": count,
         "lives": len(lives) if isinstance(lives, list) else 0,
         "children": len(children) if isinstance(children, list) else 0,
     }
+    if spider_note:
+        detail["spider_warning"] = spider_note
+    return True, detail
 
 
 def check_source(src):
     """按顺序尝试主/备地址，任一成功即视为健康。"""
     last_detail = {"error": "没有配置任何地址"}
     urls = src.get("urls", [])
+    src_ua = src.get("ua")
     for url in urls:
-        ok, detail = probe(url)
+        ok, detail = probe(url, ua=src_ua)
         if ok:
             detail["url"] = url
             return ok, detail

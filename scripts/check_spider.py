@@ -66,17 +66,17 @@ def probe(url, attempts=3):
     "这次 45 秒、下次 0.7 秒"的抖动，据此判死会误杀。重试取最优更接近
     用户实际体验：只要有一次快，通常就能用。
     """
-    rank = {"ok": 2, "slow": 1, "dead": 0}
-    best = ("dead", 0.0, "未尝试")
+    rank = {"ok": 2, "slow": 1, "dead": -1}   # 初始 best 的 dead 要低于任何真实结果
+    best = None
     for i in range(attempts):
         state, secs, note = probe_once(url)
-        if rank[state] > rank[best[0]]:
+        if best is None or rank[state] > rank[best[0]]:
             best = (state, secs, note)
         if state == "ok":
             break  # 已经拿到好结果，不用再试
         if i < attempts - 1:
             time.sleep(1.5)
-    return best
+    return best or ("dead", 0.0, "未尝试")
 
 
 def main():

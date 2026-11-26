@@ -14,14 +14,6 @@
       ]
     },
     {
-      "id": "fantaiying",
-      "name": "饭太硬",
-      "enabled": true,
-      "urls": [
-        "http://www.饭太硬.cc/tv"
-      ]
-    },
-    {
       "id": "wangerxiao",
       "name": "王二小",
       "brand": true,
@@ -46,6 +38,17 @@
       "brand": true,
       "urls": [
         "https://szyyds.cn/tv/x.json"
+      ]
+    },
+    {
+      "id": "fantaiying",
+      "name": "饭太硬",
+      "enabled": true,
+      "brand": true,
+      "ua": "okhttp/3.12.13",
+      "urls": [
+        "http://www.饭太硬.net/tv",
+        "http://www.饭太硬.cc/tv"
       ]
     },
     {
@@ -168,14 +171,6 @@
       "enabled": true,
       "urls": [
         "https://gitlab.com/noimank/tvbox/-/raw/main/tvbox1.json"
-      ]
-    },
-    {
-      "id": "liangmyjj",
-      "name": "Liangmyjj",
-      "enabled": true,
-      "urls": [
-        "https://jihulab.com/Liangmyjj/tvboxx/-/raw/main/yinzuo2.json"
       ]
     }
   ]

@@ -17,6 +17,10 @@
       "url": "https://gh-proxy.org/https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/xiaoma.json"
     },
     {
+      "name": "饭太硬",
+      "url": "https://gh-proxy.org/https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/fantaiying.json"
+    },
+    {
       "name": "小盒子单仓",
       "url": "https://gh-proxy.org/https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/xiaohezi.json"
     },
@@ -75,10 +79,6 @@
     {
       "name": "noimank",
       "url": "https://gh-proxy.org/https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/noimank.json"
-    },
-    {
-      "name": "Liangmyjj",
-      "url": "https://gh-proxy.org/https://raw.githubusercontent.com/jovian-zhibai/tvbox-sync-config/main/output/liangmyjj.json"
     }
   ]
 }
